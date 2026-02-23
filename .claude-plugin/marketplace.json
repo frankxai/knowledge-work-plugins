@@ -1,5 +1,6 @@
 {
   "name": "knowledge-work-plugins",
+  "description": "Plugins that turn Claude into a specialist for your role, team, and company. Covers productivity, sales, marketing, product management, legal, finance, data, customer support, enterprise search, bio-research, and creator workflows.",
   "owner": {
     "name": "Anthropic"
   },
@@ -58,6 +59,11 @@
       "name": "bio-research",
       "source": "./bio-research",
       "description": "Connect to preclinical research tools and databases (literature search, genomics analysis, target prioritization) to accelerate early-stage life sciences R&D"
+    },
+    {
+      "name": "creator",
+      "source": "./creator",
+      "description": "Create content, visuals, and music consistently at scale. Brand voice management, visual style systems, multi-channel content production, and AI music generation pipelines for independent creators and personal brands."
     }
   ]
 }
