@@ -23,26 +23,48 @@ First, check if `CREATOR.md` exists in the working directory.
 
 Build the creator's brand knowledge base from scratch.
 
+### Step 0: Scan for Existing Context (Before Asking Anything)
+
+Before prompting the user, silently check for existing brand signals:
+
+1. **Look for existing CLAUDE.md** in the working directory — does it have a brand, voice, or positioning section? Extract any voice attributes, audience, or content pillars already defined.
+2. **Look for a `content/` or `blog/` directory** — if found, read 2-3 recent pieces to infer voice patterns before asking
+3. **Look for a `README.md`** — often contains a project description that reveals audience and positioning
+4. **Look for existing `CREATOR.md`** — if present, offer to update rather than overwrite
+
+If existing context is found, say: "I found some context about your brand. Let me confirm a few things rather than starting from scratch." Then verify and fill gaps instead of running the full Q&A.
+
+If **~~knowledge base** is connected: search for any existing brand docs, content guidelines, or style guides.
+
 ### Step 1: Creator Profile
 
 Ask conversationally — don't dump all questions at once:
 
 "Let's set up your creator workspace. A few quick questions to start:
-1. What type of creator are you? (content, music, products, personal brand, etc.)
+1. What's your name, and what type of creator are you? (content, music, products, personal brand, etc.)
 2. What's your core audience — who do you make things for?
 3. What's your brand in 3 words?"
 
-### Step 2: Voice Documentation
+### Step 2: Voice Derivation (from samples, not self-description)
 
-"Now let's capture your voice — this is what I'll use every time I write for you.
+Don't ask users to describe their own voice in the abstract — it produces generic answers. Instead, ask for samples:
 
-Give me an example of something you've written that sounds exactly like you. And one example of content that's in your category but sounds nothing like you."
+"Paste 2-3 examples of your best content — things that sound exactly like you. They can be blog posts, social posts, emails, anything."
 
-From these examples, extract:
-- 3-5 voice attributes (what it sounds like)
-- 3-5 anti-attributes (what it never sounds like)
-- Recurring phrases or sentence structures
-- Tone preference by channel if different
+From their samples, **derive** the voice attributes by analyzing:
+- Sentence length and rhythm (short punchy vs. long analytical)
+- Formality level (casual "you" vs. formal third person)
+- Structural patterns (how do they open? how do they close?)
+- Signature phrases or constructions they repeat
+- What they include vs. leave out
+
+Then say: "Based on your samples, here's how I'd describe your voice: [attributes]. Does this feel accurate?"
+
+If they can't provide samples, fall back to: "Describe someone whose writing style yours is closest to. And give me one example of content in your space that you'd never write."
+
+Document:
+- 3-5 voice attributes with "sounds like / never sounds like" examples drawn from their actual samples
+- Anti-patterns specific to them
 
 ### Step 3: Content Pillars
 
@@ -50,9 +72,11 @@ From these examples, extract:
 
 For each: name, brief description, core audience.
 
+If they already have a blog or content archive, offer to infer pillars from it.
+
 ### Step 4: Visual Style (optional)
 
-"Do you have an established visual aesthetic? Describe it, or share an example image."
+"Do you have an established visual aesthetic? Describe it, or share a link to an example image."
 
 Capture: aesthetic direction, colors, mood, what to avoid.
 

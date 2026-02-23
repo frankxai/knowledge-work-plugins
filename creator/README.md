@@ -16,7 +16,8 @@ This plugin is designed for independent creators, personal brands, and creative 
 ### Install (Claude Code)
 
 ```bash
-claude plugins add frankxai/knowledge-work-plugins/creator
+claude plugin marketplace add frankxai/knowledge-work-plugins
+claude plugin install creator@knowledge-work-plugins
 ```
 
 ### Initialize your creative workspace
@@ -83,4 +84,4 @@ See [cowork-plugin-management](../cowork-plugin-management/) for how to customiz
 
 ---
 
-*Built on ACOS (Agentic Creator OS) patterns by [FrankX AI](https://frankx.ai).*
+*Community plugin — built on [ACOS](https://github.com/frankxai/acos-intelligence-system) patterns.*

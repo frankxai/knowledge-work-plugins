@@ -12,17 +12,16 @@ Memory makes Claude your creative collaborator — someone who knows your voice,
 Transform shorthand into full creative context:
 
 ```
-User: "write a linkedin post about the suno drop"
+User: "write a linkedin post about the Q1 launch"
               ↓ Claude decodes
-"Write a LinkedIn post in Frank's 'cool authority' voice about the
- release of 12,000+ Suno-generated tracks to the public library —
- connect to the AI Creator audience, don't lead with numbers, use
- fragment rhythm, no exclamation marks"
+"Write a LinkedIn post in [creator]'s direct, results-first voice about the
+ Q1 product launch — connect to the Indie Maker audience, lead with the outcome,
+ use short punchy sentences, no generic CTAs"
 ```
 
 Without memory, that request requires extensive explanation. With memory, Claude knows:
-- **suno drop** → the release of 12,000+ AI tracks to the public library
-- **Frank's voice** → cool authority, fragment rhythm, no CTAs like "drop a comment"
+- **Q1 launch** → the product they shipped and want to talk about
+- **[creator]'s voice** → their specific attributes (direct, results-first, etc.)
 - **linkedin post** → professional tone, thought-provoking opener, under 1,300 chars
 
 ## Architecture
@@ -60,9 +59,9 @@ creator-memory/
 ```
 User request →
 1. Check CREATOR.md (hot cache)
-   → Voice attributes? ✓
-   → Current project? ✓
-   → Terminology? ✓
+   → Voice attributes? ✓ (loaded from their brand profile)
+   → Current project? ✓ (loaded from their active projects list)
+   → Terminology? ✓ (their product/tool names decoded)
 
 2. If not found → search creator-memory/
    → voice.md for full voice rules

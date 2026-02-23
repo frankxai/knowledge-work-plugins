@@ -18,7 +18,7 @@ Accept any of:
 - A mood ("something for deep work focus")
 - A style ("lo-fi but with jazz chords")
 - A context ("background music for a cinematic product demo video")
-- A project tie-in ("music for the Arcanea project — mysterious, mythological")
+- A project tie-in ("music for the [project name] — mysterious, mythological")
 
 If unclear, ask: "What's this music for, and what feeling should it create?"
 

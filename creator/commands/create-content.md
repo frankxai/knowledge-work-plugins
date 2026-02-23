@@ -17,7 +17,7 @@ Accept any of:
 - A topic ("write about AI music generation")
 - A brief ("LinkedIn post: why I switched from Spotify to Suno for background work music")
 - A repurpose request ("turn this blog post into a Twitter thread")
-- A content type + angle ("newsletter: 3 things I learned from 12,000 AI songs")
+- A content type + angle ("newsletter: 3 things I learned from [specific experience]")
 
 If the topic is unclear, ask one clarifying question only.
 
